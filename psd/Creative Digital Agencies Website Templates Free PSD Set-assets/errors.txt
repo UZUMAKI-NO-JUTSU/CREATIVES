@@ -1,0 +1,2 @@
+[2021-03-30 22:59:03] layer "© 2016 PSDfreebies.com – All Right Reserved": Expected end of input but "\u2013" found.
+[2021-03-30 22:59:03] layer "Power by PSDfreebies.com": Unsupported extension: com

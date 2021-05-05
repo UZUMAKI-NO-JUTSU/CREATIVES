@@ -1,0 +1,819 @@
+
+/*font-family: 'Roboto', sans-serif;*/
+
+@font-face {
+    font-family: 'gotham book';
+    src: url("../fonts/Gotham/gotham book.woff") format('woff'),
+         url("../fonts/Gotham/gotham book.woff2") format('woff2')
+}
+
+@font-face {
+    font-family: 'Gotham-Medium';
+    src: url("../fonts/Gotham/Gotham-Medium.woff") format('woff'),
+         url("../fonts/Gotham/Gotham-Medium.woff2") format('woff2')
+}
+
+@font-face {
+    font-family: 'Gotham Bold';
+    src: url("../fonts/Gotham/Gotham Bold.woff") format('woff'),
+         url("../fonts/Gotham/Gotham Bold.woff2") format('woff2')
+}
+
+@font-face {
+    font-family: 'Roboto Bold Condensed';
+    src: url("../fonts/Roboto Bold Condensed/Roboto Bold Condensed.woff") format('woff'),
+         url("../fonts/Roboto Bold Condensed/Roboto Bold Condensed.woff2") format('woff2')
+}
+
+@font-face {
+    font-family: 'Myriad Pro';
+    src: url("../fonts/Myriad Pro/Myriad Pro.woff") format('woff'),
+         url("../fonts/Myriad Pro/Myriad Pro.woff2") format('woff2')
+}
+
+/*
+@font-face {
+    font-family: 'GoshaSans';
+    src: url("../fonts/GoshaSans/GoshaSans-Bold.woff") format('woff'),
+         url("../fonts/GoshaSans/GoshaSans-Bold.woff2") format('woff2');
+    font-weight: 700;
+}
+*/
+
+
+*,
+*:before,
+*:after,
+a,
+div,
+span {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'gotham book', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #222;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+/*    border: 1px solid red;*/
+}
+
+
+/* Header
+====================================================*/
+
+.header__line {
+    width: 100%;
+    border-bottom: 1px solid #464646;
+}
+
+.header {
+    background: url(../img/header__bg.png) no-repeat center top; 
+    background-size: 100%;  /* фоновая картинка на всю ширину экрана */
+    padding-bottom: 110px;
+
+}
+
+.header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    padding: 20px 0 20px 0;
+}
+
+.header__logo {
+    
+}
+
+.nav {
+    display: flex;
+}
+
+.nav__link {
+    font-family: 'Myriad Pro';
+    text-decoration: none;
+    color: #fff;
+    
+    font-size: 20px;
+    margin-right: 48px;
+    
+    position: relative; /* Для нижнего подчеркивания */
+}
+
+.nav__link::before { /* Нижнее подчеркивание */
+    content: '';
+    bottom: -45px;
+    left: 0;
+    position: absolute;
+    width: 0%;
+    height: 4px;
+    background-color: #11749e;
+    transition: 0.2s;
+}
+
+.nav__link:hover:before {
+    width: 100%;
+}
+
+.nav__link:last-child {
+    margin-right: 0;
+}
+
+.header__social {
+    display: flex;
+}
+
+.social__link {
+    display: block;
+    margin-right: 30px;
+}
+
+.social__link:nth-child(1) {
+    background: url(../img/fb.png) no-repeat;
+    width: 10px;
+    height: 20px;
+}
+
+.social__link:nth-child(2) {
+    background: url(../img/twitter.png) no-repeat;
+    width: 18px;
+    height: 15px;
+}
+
+.social__link:nth-child(3) {
+    background: url(../img/skype.png) no-repeat;
+    width: 18px;
+    height: 18px;
+}
+
+.social__link:nth-child(4) {
+    background: url(../img/in.png) no-repeat;
+    width: 18px;
+    height: 17px;
+    margin-right: 10px;
+}
+
+
+/* First
+====================================================*/
+
+.first {
+    padding-top: 275px;
+}
+
+.first__title {
+    font-family: 'Gotham Bold';
+    font-size: 152px;
+    color: #f5f5f5;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.first__text {
+    font-family: 'Gotham Medium';
+    font-size: 24px;
+    letter-spacing: 20px;
+    color: #11749e;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.first__scroll {
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+}
+
+.first__scroll_text {
+    margin-top: 120px;
+    margin-bottom: 23px;
+
+}
+
+.first__ellipse {
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* About
+====================================================*/
+
+.about {
+    background-color: #11749e;
+    padding-bottom: 130px;
+}
+
+.section__title {
+    font-family: 'Gotham Medium';
+    color: #222;
+    text-transform: uppercase;
+    
+    text-align: center;
+    
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    padding-top: 172px;
+    padding-bottom: 144px;
+    font-size: 37px;
+}
+
+.about__title_main {
+    color: #fff;
+    background-image: url("../img/W.png");
+}
+
+.about__group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about__item {
+    margin-right: 40px;
+}
+
+.about__item:last-child {
+    margin-right: 0;
+}
+
+.about__img {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 23px;
+}
+
+.about__title {
+    font-family: 'Gotham Medium';
+    font-size: 18px;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.about__text {
+    font-family: 'gotham book';
+    color: #fff;
+    text-align: center;
+}
+
+
+/* Akita
+====================================================*/
+
+.container__min_right {
+    box-sizing: border-box;
+    width: 587px;
+    float: right;
+    padding: 80px 115px 115px 15px;
+
+}
+
+.container__min_left {
+    box-sizing: border-box;
+    width: 587px;
+    float: left;
+    padding: 80px 50px 115px 77px;
+
+}
+
+.akita {
+    
+}
+
+.akita__group {
+    display: flex;
+    flex-wrap: wrap;
+    
+    width: 100%;
+}
+
+.akita__item {
+    width: 50%;
+}
+
+.akita__item:nth-child(1) {
+    background-color: #222;
+}
+
+.akita__item:nth-child(2) {
+    background-image: url("../img/akita__img_1.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.akita__item:nth-child(3) {
+    background-image: url("../img/akita__img_2.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.akita__item:nth-child(4) {
+    color: #000;
+    background-color: #f3f3f3;   
+}
+
+
+.akite__date, .alita__title, .akita__text {
+    color: #fff;
+}
+
+.akita__text_black, .alita__title_black, .akite__date_black {
+    color: #222;
+}
+
+.akite__date {
+    font-size: 13px;
+    
+    margin-bottom: 20px;
+}
+
+.alita__title {
+    font-family: 'Gotham-Medium';
+    font-size: 25px;
+    text-transform: uppercase;
+    
+    margin-bottom: 45px;
+}
+
+.akita__text {
+    line-height: 24px;
+}
+
+.akita__text_lower {
+    display: block;
+    
+    margin-top: 40px;
+}
+
+
+/* Blog
+====================================================*/
+
+.blog {
+    padding-bottom: 115px;
+}
+
+.blog__title {
+    color: #222;
+    
+    background-image: url("../img/blog__bg_title.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    padding-top: 160px;
+    padding-bottom: 115px;
+}
+
+.section__text {
+    font-family: 'gotham book';
+    font-size: 30px;
+    color: 222px;
+    
+    text-align: center;
+    padding-bottom: 80px;
+}
+
+.blog__group {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.blog__item {
+    text-align: center;
+    margin-right: 30px;
+}
+
+.blog__item:last-child {
+    margin-right: 0;
+}
+
+.blog__item_img {
+}
+
+.blog__item_title {
+    font-family: 'Gotham-Medium';
+    font-size: 18px;
+    color: #11749e;
+    text-transform: uppercase;
+    
+    margin-top: 44px;
+    margin-bottom: 17px;
+}
+
+.blog__item_text {
+    line-height: 24px;
+}
+
+
+/* Blue
+====================================================*/
+
+.blue {
+    background-color: #11749e;
+    padding-top: 113px;
+    padding-bottom: 157px;
+    
+}
+
+.blue__group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.blue__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    
+    margin-right: 65px;
+}
+
+.blue__item:last-child {
+    margin-right: 0;
+}
+
+.blue__img {
+    margin-right: 35px;
+    width: 70px;
+    height: 70px;
+}
+
+.blue__text {
+    color: #fff;
+    line-height: 24px;
+}
+
+
+/* Services
+====================================================*/
+
+.services {
+    background: url(../img/services__bg.png) no-repeat center top; 
+    background-size: 100%;  /* фоновая картинка на всю ширину экрана */
+    padding-bottom: 110px;
+    padding-top: 100px;
+}
+
+.sevices__group {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.services__item {
+    
+}
+
+.services__title {
+    font-family: 'Gotham-Medium';
+    color: #fff;
+    font-size: 25px;
+    text-transform: uppercase;
+    
+    margin-top: 128px;
+}
+
+.services__text {
+    color: #fff;
+    
+    margin-top: 42px;
+    width: 500px;
+    line-height: 24px;
+}
+
+.services__link_group {
+    margin-top: 70px;
+    
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.services__link {
+    width: 100%;
+    max-width: 370px;
+    padding: 13px 19px;
+    margin-bottom: 24px;
+    
+    font-family: 'Gotham-Medium';
+    font-size: 15px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    
+    background-color: #11749e;
+}
+
+.services__link:nth-child(2) {
+    max-width: 400px;
+}
+
+.services__link:nth-child(3) {
+    max-width: 428px;
+    margin-bottom: 0;
+}
+
+.services__link:hover {
+    background-color: #fff;
+    color: #11749e;
+}
+
+.services__img {
+    
+}
+
+
+/* Team
+====================================================*/
+
+.team {
+    padding-bottom: 124px;
+}
+
+.team__title {
+    background-image: url("../img/T.png");
+}
+
+.team__text {
+    
+}
+
+.team__group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.team__item {
+    background: url(../img/team__img_1.png) no-repeat;
+    position: relative;
+    width: 270px;
+    height: 414px;
+}
+
+.team__item:nth-child(2) {
+    background: url(../img/team__img_2.png) no-repeat;
+}
+
+.team__item:nth-child(3) {
+    background: url(../img/team__img_3.png) no-repeat;
+}
+
+.team__item:nth-child(4) {
+    background: url(../img/team__img_4.png) no-repeat;
+}
+
+.team__item_heading {
+    position: absolute;
+    bottom: -45px;
+    left: 50%;
+    margin-left: -106.17px;
+    
+    background-color: #fff;
+    text-align: center;
+    
+    padding: 24px 40px;
+}
+
+.team__item_title {
+    font-size: 20px;
+    font-family: 'Gotham-Medium';
+    color: #11749e;
+}
+
+.team__item_text {
+    font-size: 15px;
+    color: #000;
+    font-family: 'Gotham-Medium';
+    
+    margin-top: 14px;
+}
+
+
+/* Feedback
+====================================================*/
+
+.feedback {
+    background: url(../img/feedback_bg.png) no-repeat center top; 
+    background-size: 100%;  /* фоновая картинка на всю ширину экрана */
+    
+    padding-bottom: 100px;
+}
+
+.feedback__title {
+    background-image: url("../img/C.png");
+    color: #fff;
+}
+
+.form {
+    
+}
+
+.form__group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input {
+    width: 370px;
+    padding: 20px;
+    margin-right: 20px;
+    border: 1px solid #fff;
+    
+    background-color: transparent; /* прозрачный фон для input */
+    
+    font-family: 'gotham book';
+    color: #fff;
+    
+    outline: none;
+}
+
+.input:last-child {
+    margin-right: 0;
+}
+
+.input:focus {
+    border: 1px solid #11749e;
+    outline: none;
+}
+
+
+::placeholder {  /* стилизация placeholder */
+    font-family: 'gotham book';
+    color: #fff;
+    font-size: 15px;
+}
+
+.form__textarea {
+    width: 100%;
+    height: 100%;
+    min-height: 150px;
+    padding: 20px;
+    margin-top: 40px;
+    
+    resize:none; /* запрещает изменять размеры textarea */
+    
+    border: 1px solid #fff;
+    border-radius: 0;
+    
+    background-color: transparent;
+    
+    font-family: 'gotham book';
+    color: #fff;
+}
+
+.form__textarea:focus {
+    border: 1px solid #11749e;
+    border-radius: 0;
+    outline: 0;
+}
+
+.form__btn {
+    margin: 0 auto;
+    padding: 20px 70px;
+    margin-top: 45px;
+    border: 0;
+    
+    font-family: 'Gotham-Medium';
+    font-size: 24px;
+    color: #fff;
+    text-transform: uppercase;
+    
+    background-color: #11749e;
+    
+    cursor: pointer;
+}
+
+.form__btn:hover {
+    background-color: #0d5e81;
+}
+
+
+/* Map
+====================================================*/
+
+.map {
+    background: url(../img/map.png) no-repeat center top; 
+    background-size: 100%;  /* фоновая картинка на всю ширину экрана */
+    
+    width: 100%;
+    min-height: 330px;
+}
+
+
+/* Footer
+====================================================*/
+
+.footer {
+    background-color: #222;
+    padding: 50px 0;
+}
+
+.footer__group {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;  /* отдает дочерним элементам одинковую ширину */
+    align-items: center;  /* центрует по горизонтали, относительно самого высокого элемента */
+}
+
+.footer__item {
+    
+}
+
+.footer__text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    color: #fff;
+}
+
+.footer__img {
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
